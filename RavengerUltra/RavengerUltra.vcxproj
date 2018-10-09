@@ -128,10 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="components.cpp" />
+    <ClCompile Include="entities.cpp" />
     <ClCompile Include="GameLogicLoop.cpp" />
-    <ClCompile Include="GraphicLoop.cpp" />
+    <ClCompile Include="renderSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="movementSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\SFML-2.5.0\bin\openal32.dll" />
@@ -147,9 +149,11 @@
     <None Include="C:\SFML-2.5.0\bin\sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Component.hpp" />
+    <ClInclude Include="components.hpp" />
+    <ClInclude Include="entities.hpp" />
     <ClInclude Include="GameLogicLoop.hpp" />
-    <ClInclude Include="GraphicLoop.hpp" />
+    <ClInclude Include="renderSystem.hpp" />
+    <ClInclude Include="movementSystem.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
