@@ -1,13 +1,24 @@
-#pragma once
+#ifndef ENTITIES_HPP__
+#define ENTITIES_HPP__
 
 #include "components.hpp"
 
-struct entity {
+struct SystemKey {
 
-	unsigned long id;
-	unsigned long componentsKey;
-
-	std::unique_ptr<modelComponent> modelComponent;
-	std::unique_ptr<drawableComponent> drawableComponent;
+  bool MovementSystem;
+  bool RenderSystem;
 
 };
+
+struct Entity {
+
+	unsigned long id;
+	SystemKey systemsKey;
+
+	std::unique_ptr<ModelComponent> modelComponent;
+	std::unique_ptr<DynamicComponent> dynamicComponent;
+	std::unique_ptr<DrawableComponent> drawableComponent;
+
+};
+
+#endif

@@ -9,6 +9,8 @@
 
 *.dll
 *.vcxproj
+*.cbp
+*.depend
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

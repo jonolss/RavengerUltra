@@ -6,14 +6,20 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
-struct modelComponent {
+struct ModelComponent {
 	sf::Vector2f position;
 	sf::Vector2f size;
 	sf::Vector2f scale;
 	float rotation;
 };
 
-struct drawableComponent {
+struct DynamicComponent {
+  float maxSpeed;
+  sf::Vector2f speed;
+  sf::Vector2f desiredPosition;
+};
+
+struct DrawableComponent {
 	std::unique_ptr<sf::Sprite> sprite;
 };
 
