@@ -7,6 +7,7 @@ struct SystemKey {
 
   bool MovementSystem;
   bool RenderSystem;
+  bool CollisionSystem;
 
 };
 
@@ -18,6 +19,7 @@ struct Entity {
 	std::unique_ptr<ModelComponent> modelComponent;
 	std::unique_ptr<DynamicComponent> dynamicComponent;
 	std::unique_ptr<DrawableComponent> drawableComponent;
+	std::unique_ptr<CollisionComponent> collisionComponent;
 
 };
 

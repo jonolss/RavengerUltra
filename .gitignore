@@ -11,6 +11,7 @@
 *.vcxproj
 *.cbp
 *.depend
+*.layout
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

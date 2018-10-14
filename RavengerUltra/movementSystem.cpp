@@ -40,8 +40,20 @@ void moveEntity(std::list<Entity*>* entities)
       }
 
       sf::Vector2f desiredPosition = dynamicComponent->desiredPosition;
+      sf::Vector2f distance = desiredPosition - model->position;
+      sf::Vector2f normalizedDistance = normalize(distance);
+      speed = sf::Vector2f(fmin(normalizedDistance.x, distance.x), fmin(normalizedDistance.y, distance.y));
 
-      speed = normalize(desiredPosition - model->position);
+      if(entity->systemsKey.CollisionSystem)
+      {
+        for (Entity* collisionableEntity : *entities)
+        {
+          // TODO: ADD NORMAL BOUNDING BOX COLLISION DETECTION
+
+
+        }
+      }
+
 
       model->position += speed;
     }
